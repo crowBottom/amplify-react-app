@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import "@aws-amplify/ui-react/styles.css";
-import { API, Storage } from "aws-amplify";
+import { API, Storage } from 'aws-amplify';
 import {
   Button,
   Flex,
@@ -11,7 +11,7 @@ import {
   TextField,
   View,
   withAuthenticator,
-} from "@aws-amplify/ui-react";
+} from '@aws-amplify/ui-react';
 import { listNotes } from "./graphql/queries";
 import {
   createNote as createNoteMutation,
@@ -70,6 +70,7 @@ const App = ({ signOut }) => {
 
   return (
     <View className="App">
+
       <Heading level={1}>My Notes App</Heading>
       <View as="form" margin="3rem 0" onSubmit={createNote}>
         <Flex direction="row" justifyContent="center">
@@ -94,6 +95,7 @@ const App = ({ signOut }) => {
           </Button>
         </Flex>
       </View>
+
       <Heading level={2}>Current Notes</Heading>
       <View margin="3rem 0">
       {notes.map((note) => (
@@ -126,6 +128,7 @@ const App = ({ signOut }) => {
         type="file"
         style={{ alignSelf: "end" }}
       />
+
       <Button onClick={signOut}>Sign Out</Button>
     </View>
   );
