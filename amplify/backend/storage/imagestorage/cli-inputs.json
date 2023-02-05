@@ -6,7 +6,6 @@
   "guestAccess": [],
   "authAccess": [
     "READ",
-    "WRITE"
   ],
   "triggerFunction": "NONE",
   "groupAccess": {}
